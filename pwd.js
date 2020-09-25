@@ -1,3 +1,5 @@
+const done = require("./done");
+
 module.exports = function () {
-            console.log(`Current directory ${process.cwd()}`);
+            done(`Current directory ${process.cwd()}`);
 }

@@ -1,7 +1,7 @@
 const pwdFunc = require('./pwd.js'),
-lsFunc        = require('./fs'),
+lsFunc        = require('./ls'),
 catFunc       = require('./cat'),
-curlFunc = require("./curl.js");
+curlFunc      = require("./curl.js");
 
 // Output a prompt
 process.stdout.write('prompt > ');
@@ -20,9 +20,11 @@ function pwd () {
         }
         else if (cmd === "curl"){
             curlFunc();
+        } else {
+            process.stdout.write('\nprompt > ');
         }
-        process.stdout.write('\nprompt > ');
+        
     });
 }
 
-// pwd();
+pwd();
